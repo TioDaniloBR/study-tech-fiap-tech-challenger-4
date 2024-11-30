@@ -1,7 +1,7 @@
 import { TUser, TUserRole } from "../types/user";
 import { httpRequest } from "./http.services";
 
-const BASE_API = import.meta.env.VITE_BASE_API;
+const BASE_API = 'http://localhost:3011/';
 
 export const getUserRole = (): TUserRole | null => {
   const user = localStorage.getItem('user');

@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from "react";
-import { Text, View, TextInput, Alert, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, View, TextInput, StyleSheet, TouchableOpacity } from "react-native";
 import Header from "../../../components/shared/Header";
 import { useNavigation } from '@react-navigation/native';
 
@@ -9,24 +9,8 @@ export default function Login() {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
-  const handleInputChange = (inputText: string) => {
-    setUser(inputText);
-  }
 
   const handleButtonPress = () => {
-    Alert.alert(
-      'Credenciais Digitadas',
-      `Usuário: ${user} \nSenha: ${password}`,
-      [
-        {
-          text: 'OK',
-          onPress: () => console.log('OK Pressed'),
-          style: 'cancel',
-          accessibilityLabel: 'Fechar Alerta',
-        },
-      ],
-      { cancelable: true }
-    );
     navigation.navigate('screens/Home/index', {userName: user});
   }
 

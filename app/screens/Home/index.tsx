@@ -1,13 +1,27 @@
+import usePosts from "@/hooks/usePosts";
+import { getUser } from "@/services/user.service";
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+interface Post {
+  _id: number;
+  title: string;
+  content: string;
+  author: string;
+}
+
 export default function Home({route}) {
+
+  const { data: postsData } = usePosts() as unknown as {data:Post[]};
+
+  const user = getUser()
 
   return(
     <View style={styles.homeContainer}>
       <View style={styles.infoField}>
-        <Text style={styles.infoText}>Página principal</Text>
+        <Text style={styles.infoText}>Bom te ver {user?.name}!</Text>
         <View style={[styles.detailsContent, {borderTopStartRadius: 8, borderTopEndRadius: 8}]}>
+            <Text>Publicações</Text>
           <View>
             <Text></Text>
             <Text></Text>
