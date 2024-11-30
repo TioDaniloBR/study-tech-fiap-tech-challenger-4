@@ -1,50 +1,85 @@
-# Welcome to your Expo app 👋
+# Tech Challenge - Fase 04
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Grupo
+* - Danilo Soares da Silva - RM:354317*
+* - Gabriel Antunes – RM: 354712
+* - Lucas dos Santos Melo – RM:355274*
+* - Lucas Souza Davanso – RM: 354925*
+* - Paloma Cristina da Silva Correa – RM:355519*
 
-## Get started
 
-1. Install dependencies
+## Índice
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Requisitos Técnicos](#requisitos-técnicos)
+- [Página Principal (Lista de Posts)](#página-principal-lista-de-posts)
+- [Página de Leitura de Post](#página-de-leitura-de-post)
+- [Página de Criação de Postagens](#página-de-criação-de-postagens)
+- [Página de Edição de Postagens](#página-de-edição-de-postagens)
+- [Página Administrativa](#página-administrativa)
+- [Autenticação e Autorização](#autenticação-e-autorização)
+- [Como Executar o Projeto](#como-executar-o-projeto)
+- [Contribuição](#contribuição)
 
-   ```bash
-   npm install
-   ```
 
-2. Start the app
+## Descrição do Projeto
+Este projeto visa desenvolver uma interface gráfica intuitiva para gerenciar postagens, utilizando as tecnologias React Native. A aplicação permite a criação, edição e leitura de posts, além de funcionalidades administrativas.
 
-   ```bash
-    npx expo start
-   ```
+## Requisitos Técnicos
+A interface foi desenvolvida com **React Native**. A integração é feita com a API desenvolvida na fase 2:
 
-In the output, you'll find options to open the app in a
+## Requisitos Funcionais
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Página Principal (Lista de Posts)
+- Exibir uma lista de todos os posts disponíveis.
+- Exibir uma lista de todas as postagens, com opções para editar e excluir cada post.
+![Imagem da Página Principal](src/assets/home_admin.png)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Página de Leitura de Post
+- Exibir o conteúdo completo de um post selecionado.
+![Imagem da Página de Leitura de Post](src/assets/detalhes_post_aluno.png)
 
-## Get a fresh project
+### Página de visualização de Posts como aluno
+- Exibir uma lista contendo todos os posts.
+![Imagem da Página de Leitura de Post](src/assets/detalhes_post_aluno.png)
 
-When you're ready, run:
+### Página de Criação de Postagens
+- Formulário para que docentes possam criar postagens.
+- Campos para título, conteúdo e autor.
+- Botão para enviar o post ao servidor.
+![Imagem da Página de Criação de Postagens](src/assets/criacao_post.png)
+
+### Página de Edição de Postagens
+- Formulário para que os(as) professores(as) possam editar postagens existentes.
+- Carregar os dados atuais do post para edição.
+- Botão para salvar as alterações.
+![Imagem da Página de Edição de Postagens](src/assets/editar_post.png)
+
+### Página Administrativa
+- Permitir que o admin altere o tipo de permissão dos usuários
+![Imagem da Página Administrativa](src/assets/admin.png)
+
+### Autenticação e Autorização
+- Implementar login para professores.
+- Garantir que apenas usuários autenticados possam acessar as páginas de criação, edição e administração de postagens.
+![Imagem da Autenticação](src/assets/login.png)
+
+[Repositório API Fase 2](https://github.com/LpldFiap/StudyTech.git)
+
+## Como Executar o Projeto
+1. Clone o repositório da API:
 
 ```bash
-npm run reset-project
+git clone https://github.com/LpldFiap/StudyTech.git
+```
+2. Siga as instruções para rodar o backend e garantir que ele esteja ativo.
+
+3. Clone este repositório e execute o comando abaixo:
+
+```bash
+npm run dev
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Apresentação
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![Vídeo apresentação desse Projeto](src/assets/apresentacao.mp4)
+- Caminho > *src/assets/apresentacao.zip*
